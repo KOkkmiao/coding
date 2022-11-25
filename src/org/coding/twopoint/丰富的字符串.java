@@ -11,6 +11,8 @@ public class 丰富的字符串 {
      *
      *  字符串的某个字符扩展的三个以上。
      *  能够匹配上的字符 hello
+     *  add change 123
+     *  add change 321
      *
      */
     public static int expressiveWords(String s, String[] words) {
