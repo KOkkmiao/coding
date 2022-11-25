@@ -14,6 +14,8 @@ public class 丰富的字符串 {
      *  add change 123
      *  add change 321
      *
+     *  change rebase log
+     *
      */
     public static int expressiveWords(String s, String[] words) {
         int result = 0;
