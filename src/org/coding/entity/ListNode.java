@@ -1,13 +1,13 @@
 package org.coding.entity;
 
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode() {
+    public ListNode() {
     }
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
@@ -15,4 +15,5 @@ public class ListNode {
         this.val = val;
         this.next = next;
     }
+
 }
