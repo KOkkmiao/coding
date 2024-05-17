@@ -1,6 +1,8 @@
-package org.coding.count;
+package coding.count;
 
-import org.coding.entity.ListNode;
+
+
+import coding.entity.ListNode;
 
 public class 两数之和链表 {
     /**
@@ -23,5 +25,8 @@ public class 两数之和链表 {
         root.val = sum % 10;
         root.next = recursion(l1 == null ? null : l1.next, l2 == null ? null : l2.next, sum / 10);
         return root;
+    }
+    public static void main(String[] args) {
+
     }
 }
