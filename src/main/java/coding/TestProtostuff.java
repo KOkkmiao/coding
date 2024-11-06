@@ -5,13 +5,21 @@ import io.protostuff.Tag;
 import io.protostuff.runtime.DefaultIdStrategy;
 import io.protostuff.runtime.RuntimeSchema;
 
+import javax.swing.*;
+import javax.swing.text.DefaultStyledDocument;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author xpmiao
  * @date 2023/8/8
  */
 public class TestProtostuff {
     static class EntityFather{
-        @Tag(4)
+        @Tag(44)
         String ff;
         public String getFf() {
             return ff;
@@ -69,14 +77,6 @@ public class TestProtostuff {
     public static void main(String[] args) {
 
 
-        // Entity entity = new Entity();
-        // entity.aa = "1";
-        // entity.bb = "2";
-        // entity.cc = "3";
-        //  entity.ff = "4";
-        // //
-        // String s = new String(ProtostuffUtil.serializeProtoStuffObject(entity,Entity.class));
-        // System.out.println(s);
 
         Entity deserialize =
                 (Entity) ProtostuffUtil.deserializeProtoStuffDataListToProductsObject(("\n"

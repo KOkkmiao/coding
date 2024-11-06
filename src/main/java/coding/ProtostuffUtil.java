@@ -1,6 +1,7 @@
 package coding;
 
 import io.protostuff.LinkedBuffer;
+import io.protostuff.Pipe;
 import io.protostuff.ProtostuffIOUtil;
 import io.protostuff.Schema;
 import io.protostuff.runtime.RuntimeSchema;
@@ -83,7 +84,6 @@ public class ProtostuffUtil {
                 }
                 long start = System.currentTimeMillis() ;
                 Schema  schema = RuntimeSchema.getSchema(clazz);
-    
                 Object obj = null;
                 try {
                     obj = clazz.newInstance();
@@ -94,8 +94,8 @@ public class ProtostuffUtil {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
-            
-                ProtostuffIOUtil.mergeFrom(bytes,obj, schema);
+
+             ProtostuffIOUtil.mergeFrom(bytes,obj, schema);
                 long end = System.currentTimeMillis() ;
                 System.out.println("usetime is"+(end - start));
                 return obj;

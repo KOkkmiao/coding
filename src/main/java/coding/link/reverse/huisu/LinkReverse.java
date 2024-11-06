@@ -67,6 +67,7 @@ public class LinkReverse {
 
         node.next.next = node;
         // node.next = null;
+        // 这里指定 临时
         node.next  = otherNode; // 这种写法不太好理解。 就是所有的前一个跳转的节点都指向 翻转节点之后的数据。 最终1 号node 就能衔接上了
         return last;
     }
