@@ -48,6 +48,40 @@ public class 双指针解决数组问题 {
         }
         return data;
     }
+
+    /**
+     * 双指针解决最大回文问题
+     * aba  aba
+     * cbbd  bb
+     * @return
+     */
+    @Test
+    public void longestPalindrome() {
+        String max ="";
+        String s = "cqabazc";
+        for (int i = 0; i < s.length(); i++) {
+            String 偶数str = 获取回文(i, i, s);
+            String 奇数str = 获取回文(i, i+1, s);
+            String s1 = 偶数str.length() > 奇数str.length() ? 偶数str : 奇数str;
+            max = s1.length() > max.length() ? s1 : max;
+        }
+        System.out.println(max);
+    }
+    public String 获取回文(int left,int right,String s){
+        String res = "";
+        while (left >= 0 && right < s.length()) {
+            char c = s.charAt(left);
+            char c1 = s.charAt(right);
+            if (c == c1) {
+                res = s.substring(left,right+1);
+            }else {
+                return res;
+            }
+            left--;
+            right++;
+        }
+        return res;
+    }
     @Test
     public void test(){
         int[] ints = removeDupData(new int[] {1, 1, 2, 2, 2, 3, 3, 3, 4});

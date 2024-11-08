@@ -94,7 +94,7 @@ public class 丰富的字符串 {
     }
     public int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> dic = new HashMap<>();
-        int i = -1, res = 0, len = s.length();
+        int i = 0, res = 0, len = s.length();
         for(int j = 0; j < len; j++) {
             if (dic.containsKey(s.charAt(j)))
                 i = Math.max(i, dic.get(s.charAt(j))); // 更新左指针 i
