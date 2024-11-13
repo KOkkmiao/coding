@@ -20,5 +20,6 @@ public class 接水滴 {
                 right++;
             }
         }
+        return res;
     }
 }

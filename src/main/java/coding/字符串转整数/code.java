@@ -30,5 +30,6 @@ public class code {
             // 判断32位最大值 和负数最大值。
 
         }
+        return 1;
     }
 }
