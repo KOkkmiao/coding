@@ -56,20 +56,6 @@ public class code {
         return res;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static List<Integer> findSubstring(String s, String[] words) {
         List<Integer> res = new ArrayList<Integer>();
         int wordNum = words.length;
