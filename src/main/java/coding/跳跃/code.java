@@ -43,7 +43,6 @@ public class code {
         return dp[nums.length - 1];
     }
 
-}
 
     public static void main(String[] args) {
         System.out.println(canJump(new int[]{3, 2, 1, 0, 4}));
