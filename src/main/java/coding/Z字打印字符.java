@@ -44,4 +44,72 @@ public class Z字打印字符 {
         }
         return builder.toString();
     }
+    public static void convert2(String s, int numRows) {
+        List<StringBuilder> value = new ArrayList<>();
+        for (int i = 0; i < numRows; i++) {
+            value.add(new StringBuilder());
+        }
+        // 添加好层数的几个。  字符串肯定是按照顺序便利的。 只是放入value的顺序不一样。
+        int j = 0;
+        int flag=-1;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            value.get(j).append(c);
+            // 判断应该在哪一个j 的时候转换方向。 1 j == 0 的时候需要转化 因为要向下了。 当到达最下边界的时候也要转变
+            if (j == numRows - 1 || j == 0) {
+                flag = -flag;
+            }
+            j +=flag;
+        }
+        for (StringBuilder stringBuilder : value) {
+            System.out.println(stringBuilder);
+        }
+    }
+    public static void convert3(String s, int numRows) {
+        int count = s.length() / numRows ;
+        int gapCount = numRows - 2;
+        int total = (count - 1) * gapCount + count;
+        char[][] values = new char[numRows][total];
+        // 添加好层数的几个。  字符串肯定是按照顺序便利的。 只是放入value的顺序不一样。
+        int j = 0;
+        int k = 0;
+        int flag=-1;
+        boolean flagRight = true;
+        int rightCount = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            values[j][k] = c;
+            // 判断应该在哪一个j 的时候转换方向。 1 j == 0 的时候需要转化 因为要向下了。 当到达最下边界的时候也要转变
+            if (j == numRows - 1 || j == 0) {
+                flag = -flag;
+                // 前者翻转当前不翻转。
+                flagRight = !flagRight;
+
+                if (flagRight) {
+                    rightCount = numRows - 1;
+                }else{
+                    rightCount = 0;
+                }
+            }
+            j += flag;
+            // 判断k 什么时候右移
+            if (rightCount > 0) {
+                k++;
+                rightCount -=1;
+            }
+        }
+        for (char[] value : values) {
+            for (char c : value) {
+                if (c == 0){
+                    System.out.print(" ");
+                }else {
+                    System.out.print(c);
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        convert3("PAYPALISHIRING",3);
+    }
 }

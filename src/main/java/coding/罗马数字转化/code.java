@@ -1,5 +1,8 @@
 package coding.罗马数字转化;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 /**
  * @Author: author
  * @Description:
@@ -64,5 +67,12 @@ public class code {
             }
         }
         return stringBuilder.toString();
+    }
+
+    public static void main(String[] args) {
+        PriorityQueue<Integer> objects = new PriorityQueue<>(3, Comparator.comparingInt(k -> k));
+
+
+        System.out.println(objects);
     }
 }

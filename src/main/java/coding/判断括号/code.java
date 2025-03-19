@@ -37,4 +37,23 @@ public class code {
         }
         return true;
     }
+    public static boolean code2(String s) {
+        LinkedList<Character> queue = new LinkedList<>();
+        Map<Character, Character> map = new HashMap<>();
+        map.put('}','{');
+        map.put(']','[');
+        for (int i = 0; i < s.length(); i++) {
+            if (map.containsKey(s.charAt(i))) {
+                // 存在右括号了。 则需要弹出
+                Character character = queue.pollLast();
+                if (character != map.get(s.charAt(i))) {
+                    return false;
+                }
+            }else{
+                // 所有做括号都压栈了。
+                queue.add(s.charAt(i));
+            }
+        }
+        return true;
+    }
 }

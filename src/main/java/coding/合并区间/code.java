@@ -1,6 +1,5 @@
 package coding.合并区间;
 
-import sun.jvm.hotspot.LinuxVtblAccess;
 
 import java.util.Arrays;
 import java.util.Comparator;

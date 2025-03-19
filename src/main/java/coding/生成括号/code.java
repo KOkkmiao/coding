@@ -66,6 +66,7 @@ public class code {
     public static void main(String[] args) {
         code(3);
         System.out.println(results);
+        System.out.println(generateParenthesis(3));
     }
 
 }

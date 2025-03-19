@@ -37,20 +37,17 @@ public class code {
                 if (wordsDir.containsKey(w)) {
                     Integer orDefault = window.getOrDefault(w, 0);
                     window.put(w,orDefault+1);
+                    if (window.get(w)>wordsDir.get(w)){
+                        break;
+                    }
                 }else {
                     break;
                 }
                 num++;
-                // 窗口收缩
-                if (num == wordCount) {
-                    for (String s1 : wordsDir.keySet()) {
-                        if (window.getOrDefault(s1,0) != wordsDir.get(s1)) {
-                            break;
-                        }
-                    }
-                 res.add(i);
-                }
-
+            }
+            // 窗口收缩
+            if (num == wordCount) {
+                res.add(i);
             }
         }
         return res;
