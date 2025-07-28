@@ -26,4 +26,20 @@ public class 无重复子串 {
         }
         return res;
     }
+    public static int lengthOfLongestSubstring2(String s) {
+        int result = 0;
+        int start = 0;
+        for (int i = 1; i <s.length(); i++) {
+            char c = s.charAt(i);
+            char ss = s.charAt(start);
+            if (c == ss) {
+                start = i;
+            }
+            result = Math.max(result, i - start+1);
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        System.out.println(lengthOfLongestSubstring2("alkcdftab"));
+    }
 }
