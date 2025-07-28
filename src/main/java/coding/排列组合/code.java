@@ -62,5 +62,7 @@ public class code {
         for (String comb : combinations) {
             System.out.println(comb);
         }
+            show(new int[] {1, 2, 3}, 0, new LinkedList<>(),result);
+            System.out.println(result);
     }
 }
