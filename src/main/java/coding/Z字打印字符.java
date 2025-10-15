@@ -1,7 +1,10 @@
 package coding;
 
+import coding.跳跃.code;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * @Author: author
@@ -110,6 +113,10 @@ public class Z字打印字符 {
         }
     }
     public static void main(String[] args) {
-        convert3("PAYPALISHIRING",3);
+        // convert3("PAYPALISHIRING",3);
+        float a =
+                111111111111111111111111111111111111111.999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999F;
+        System.out.println(a>2);
+
     }
 }

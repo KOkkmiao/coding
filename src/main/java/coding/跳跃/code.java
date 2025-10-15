@@ -1,5 +1,9 @@
 package coding.跳跃;
 
+import java.io.File;
+import java.io.RandomAccessFile;
+import java.util.ArrayList;
+
 /**
  * @Author: author
  * @Description:
@@ -7,6 +11,10 @@ package coding.跳跃;
  * @Version: 1.0
  */
 public class code {
+    public static String a = "1";
+    public static String a1 = "1";
+    public static String a2 = "1";
+    public static String a3 = "1";
     private static boolean res = false;
 
     public static boolean canJump(int[] nums) {
@@ -46,5 +54,19 @@ public class code {
 
     public static void main(String[] args) {
         System.out.println(canJump(new int[]{3, 2, 1, 0, 4}));
+        var list = new ArrayList<String>();   // 推断为 ArrayList<String>
+        var num  = 123;                       // int
+        var pi   = 3.14;                      // double
+        var flag = true;
+        System.out.println(Integer.toBinaryString(0xF));
+        System.out.println(0xA);
+
+        int a = 0x1A;
+        int aa = a | 1;
+        System.out.println(Integer.toBinaryString(a));
+        System.out.println(Integer.toBinaryString(aa));
+        System.out.println(Integer.toBinaryString(aa & ~0xF));
+        System.out.println(0xF);
+
     }
 }
