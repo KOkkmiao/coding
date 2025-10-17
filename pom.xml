@@ -46,6 +46,16 @@
             <artifactId>async-profiler</artifactId>
             <version>4.1</version>
         </dependency>
+        <dependency>
+            <groupId>io.opentracing</groupId>
+            <artifactId>opentracing-api</artifactId>
+            <version>0.22.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.opentracing</groupId>
+            <artifactId>opentracing-util</artifactId>
+            <version>0.22.0</version>
+        </dependency>
 
     </dependencies>
 
